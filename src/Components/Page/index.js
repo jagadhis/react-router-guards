@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import {BrowserRouter as Link,Router} from 'react-router-dom';
 import { Loggedin } from '../../utils';
 import { STORAGE_KEYS } from '../../utils/constants';
 import './page.module.scss';
@@ -14,6 +14,7 @@ const Page = ({ children, history }) => {
   };
 
   return (
+    <Router>
     <div>
       <nav>
         <Link to="/">Home</Link>
@@ -26,6 +27,7 @@ const Page = ({ children, history }) => {
       <main>{children}</main>
       <footer />
     </div>
+    </Router>
   );
 };
 
