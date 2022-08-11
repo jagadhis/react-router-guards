@@ -1,5 +1,5 @@
 import { STORAGE_KEYS } from './constants';
 
-const getIsLoggedIn = () => localStorage.getItem(STORAGE_KEYS.IS_LOGGED_IN) === 'true';
+const Loggedin = () => localStorage.getItem(STORAGE_KEYS.IS_LOGGED_IN) === 'true';
 
-export default getIsLoggedIn;
+export default Loggedin;
